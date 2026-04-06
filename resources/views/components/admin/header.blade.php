@@ -1,3 +1,13 @@
-<div>
-    <!-- No surplus words or unnecessary actions. - Marcus Aurelius -->
-</div>
+@props(['section' => 'dashboard'])
+
+@php
+    $menuTitles = [
+        'dashboard' => 'Dashboard',
+        'products' => 'Produk',
+        'orders' => 'Pesanan',
+        'users' => 'Pengguna',
+        'reports' => 'Laporan',
+        'settings' => 'Pengaturan',
+    ];
+    $sectionLabel = $menuTitles[$section] ?? 'Dashboard';
+@endphp
