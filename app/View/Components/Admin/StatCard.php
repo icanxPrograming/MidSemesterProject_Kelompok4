@@ -8,12 +8,20 @@ use Illuminate\View\Component;
 
 class StatCard extends Component
 {
+    public string $title;
+    public string $value;
+    public string $description;
+    public string $accent;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(string $title = '', string $value = '', string $description = '', string $accent = 'sky')
     {
-        //
+        $this->title = $title;
+        $this->value = $value;
+        $this->description = $description;
+        $this->accent = $accent;
     }
 
     /**
